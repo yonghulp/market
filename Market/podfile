@@ -1,0 +1,7 @@
+platform :ios, '7.0'
+target "Market" do
+pod 'AFNetworking'
+pod 'YYKit'
+pod 'UMengSocialCOM', '~> 5.2.1'
+pod 'MWPhotoBrowser', '~> 2.1.2'
+end

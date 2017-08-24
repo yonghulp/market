@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyView">
+            <connections>
+                <outlet property="FullVideoView" destination="9kc-J6-nTG" id="8dL-cM-gnP"/>
+                <outlet property="VideoView" destination="wDK-7G-Y16" id="qYc-Gu-91F"/>
+                <outlet property="camCtrShowButton" destination="Pda-BO-KQc" id="JtU-Fg-9Nn"/>
+                <outlet property="camCtrView" destination="gQS-1J-EMl" id="b7I-48-huw"/>
+                <outlet property="camDownButton" destination="FJC-aY-5Xd" id="1tq-3I-whI"/>
+                <outlet property="camFarButton" destination="Bju-AH-haO" id="g37-2e-iz6"/>
+                <outlet property="camLeftButton" destination="WZt-vv-7Ka" id="S4r-fW-6SU"/>
+                <outlet property="camNearButton" destination="PdO-35-V8P" id="74w-AB-ugq"/>
+                <outlet property="camRightButton" destination="rDx-62-PNs" id="ebm-8v-tS3"/>
+                <outlet property="camUpButton" destination="MZf-F0-Bnv" id="3M0-ql-peo"/>
+                <outlet property="camZoomInButton" destination="e8t-09-UYq" id="R9t-YA-Tcf"/>
+                <outlet property="camZoomOutButton" destination="ca7-6c-xku" id="1e9-Al-sED"/>
+                <outlet property="captureButton" destination="Pop-Kc-eHa" id="8iR-N4-wtz"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="3mn-U6-lOu"/>
+                <outlet property="fullScreenButton" destination="b5P-wR-419" id="Qce-mj-wBg"/>
+                <outlet property="labelCameraName" destination="US7-86-pwi" id="2Zr-HK-5ya"/>
+                <outlet property="labelStatus" destination="YHh-Ee-ZQS" id="s9k-ti-euZ"/>
+                <outlet property="playButton" destination="V2t-LR-1Qr" id="fBJ-yp-zrH"/>
+                <outlet property="returnButton" destination="xSJ-XS-Qru" id="HXi-Tq-wZF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="BYY-OZ-PXz">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="US7-86-pwi" userLabel="cameraName">
+                    <rect key="frame" x="13" y="26" width="346" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Hp9-uE-GIJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wDK-7G-Y16" userLabel="videoView">
+                    <rect key="frame" x="0.0" y="50" width="375" height="450"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHh-Ee-ZQS" userLabel="statusLabel">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="sLd-fB-ooN"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.70986128829999995" blue="0.36462254529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQS-1J-EMl" userLabel="camCtrView">
+                            <rect key="frame" x="0.0" y="406" width="375" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZt-vv-7Ka" userLabel="camLeft">
+                                    <rect key="frame" x="0.0" y="0.0" width="75" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal">
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="camCtrLeftButtonDown:" destination="-1" eventType="touchDown" id="W1U-mc-QbV"/>
+                                        <action selector="camCtrStopButtonUp:" destination="-1" eventType="touchUpInside" id="b9a-aX-YZM"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDx-62-PNs" userLabel="camRight">
+                                    <rect key="frame" x="75" y="0.0" width="75" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal">
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="camCtrRightButtonDown:" destination="-1" eventType="touchDown" id="OL0-G9-ANc"/>
+                                        <action selector="camCtrStopButtonUp:" destination="-1" eventType="touchUpInside" id="UPY-py-l0L"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZf-F0-Bnv" userLabel="camUp">
+                                    <rect key="frame" x="150" y="0.0" width="75" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal">
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="camCtrStopButtonUp:" destination="-1" eventType="touchUpInside" id="FMV-k6-jGt"/>
+                                        <action selector="camCtrUpButtonDown:" destination="-1" eventType="touchDown" id="car-RM-YgI"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJC-aY-5Xd" userLabel="camDown">
+                                    <rect key="frame" x="225" y="0.0" width="75" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal">
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="camCtrDownButtonDown:" destination="-1" eventType="touchDown" id="E8Z-Id-ZWi"/>
+                                        <action selector="camCtrStopButtonUp:" destination="-1" eventType="touchUpInside" id="VGx-DX-xTY"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8t-09-UYq" userLabel="camZoomIn">
+                                    <rect key="frame" x="300" y="0.0" width="75" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal">
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="camCtrStopButtonUp:" destination="-1" eventType="touchUpInside" id="0bJ-s4-oUI"/>
+                                        <action selector="camCtrZoomInButtonDown:" destination="-1" eventType="touchDown" id="Kff-1w-qiw"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ca7-6c-xku" userLabel="camZoomOut">
+                                    <rect key="frame" x="375" y="0.0" width="75" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal">
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="camCtrStopButtonUp:" destination="-1" eventType="touchUpInside" id="f5a-b8-Txr"/>
+                                        <action selector="camCtrZoomOutButtonDown:" destination="-1" eventType="touchDown" id="oiD-h1-zDE"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PdO-35-V8P" userLabel="camNear">
+                                    <rect key="frame" x="450" y="0.0" width="75" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal">
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="camCtrNearButtonDown:" destination="-1" eventType="touchDown" id="PhW-K2-JKl"/>
+                                        <action selector="camCtrStopButtonUp:" destination="-1" eventType="touchUpInside" id="yJo-1t-I8c"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bju-AH-haO" userLabel="camFar">
+                                    <rect key="frame" x="525" y="0.0" width="75" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal">
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="camCtrFarButtonDown:" destination="-1" eventType="touchDown" id="dq4-VC-aAZ"/>
+                                        <action selector="camCtrStopButtonUp:" destination="-1" eventType="touchUpInside" id="aAW-E7-6QR"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="YHh-Ee-ZQS" secondAttribute="trailing" id="AEh-xP-OR3"/>
+                        <constraint firstItem="YHh-Ee-ZQS" firstAttribute="top" secondItem="wDK-7G-Y16" secondAttribute="top" id="BwW-D2-WDG"/>
+                        <constraint firstItem="gQS-1J-EMl" firstAttribute="top" secondItem="YHh-Ee-ZQS" secondAttribute="bottom" constant="376" id="Grj-67-mGB"/>
+                        <constraint firstItem="gQS-1J-EMl" firstAttribute="leading" secondItem="wDK-7G-Y16" secondAttribute="leading" id="Mey-Sh-MHp"/>
+                        <constraint firstItem="YHh-Ee-ZQS" firstAttribute="leading" secondItem="wDK-7G-Y16" secondAttribute="leading" id="WAo-F9-SZL"/>
+                        <constraint firstAttribute="trailing" secondItem="gQS-1J-EMl" secondAttribute="trailing" id="dzT-3a-oXC"/>
+                        <constraint firstAttribute="height" constant="450" id="ouf-OP-TUS"/>
+                        <constraint firstAttribute="bottom" secondItem="gQS-1J-EMl" secondAttribute="bottom" id="xYl-Ow-0DV"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2t-LR-1Qr" userLabel="playButton">
+                    <rect key="frame" x="0.0" y="500" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="XvO-35-CLf"/>
+                        <constraint firstAttribute="height" constant="50" id="qsz-4F-0gV"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="playButtonClicked:" destination="-1" eventType="touchUpInside" id="cLf-vZ-bSQ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pop-Kc-eHa" userLabel="captureButton">
+                    <rect key="frame" x="50" y="500" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="0Zq-ZU-52B"/>
+                        <constraint firstAttribute="width" constant="50" id="Nm7-EX-ZvZ"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="captureButtonClicked:" destination="-1" eventType="touchUpInside" id="HtC-iW-udx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5P-wR-419" userLabel="fullScreenButton">
+                    <rect key="frame" x="100" y="500" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="kQP-3U-Z4C"/>
+                        <constraint firstAttribute="width" constant="50" id="tEs-vo-xn8"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="fullScreenButtonClicked:" destination="-1" eventType="touchUpInside" id="3xg-as-2wZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pda-BO-KQc" userLabel="camCtrShowButton">
+                    <rect key="frame" x="150" y="500" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="ZE9-Vm-gKh"/>
+                        <constraint firstAttribute="height" constant="50" id="o9Y-Gd-oBf"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="camCtrShowButtonClicked:" destination="-1" eventType="touchUpInside" id="Yvi-f1-c7x"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSJ-XS-Qru" userLabel="return">
+                    <rect key="frame" x="550" y="500" width="50" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="returnClicked:" destination="-1" eventType="touchUpInside" id="iZI-Dn-6fP"/>
+                    </connections>
+                </button>
+                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9kc-J6-nTG" userLabel="fullVideoView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="660"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="BYY-OZ-PXz" secondAttribute="bottom" id="2Vc-vz-cU6"/>
+                <constraint firstItem="wDK-7G-Y16" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2Xe-MF-JgP"/>
+                <constraint firstAttribute="trailing" secondItem="US7-86-pwi" secondAttribute="trailing" constant="16" id="3I3-oI-2cs"/>
+                <constraint firstItem="b5P-wR-419" firstAttribute="top" secondItem="wDK-7G-Y16" secondAttribute="bottom" id="8Qt-5n-csZ"/>
+                <constraint firstItem="US7-86-pwi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="26" id="Gcl-ql-APs"/>
+                <constraint firstItem="Pop-Kc-eHa" firstAttribute="leading" secondItem="V2t-LR-1Qr" secondAttribute="trailing" id="I3B-zs-nFr"/>
+                <constraint firstItem="Pop-Kc-eHa" firstAttribute="leading" secondItem="V2t-LR-1Qr" secondAttribute="trailing" id="Jhf-ye-JlA"/>
+                <constraint firstItem="Pda-BO-KQc" firstAttribute="leading" secondItem="b5P-wR-419" secondAttribute="trailing" id="Now-vZ-g1r"/>
+                <constraint firstItem="b5P-wR-419" firstAttribute="leading" secondItem="Pop-Kc-eHa" secondAttribute="trailing" id="Wzk-Zp-heG"/>
+                <constraint firstItem="BYY-OZ-PXz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aT3-x1-LX0"/>
+                <constraint firstItem="BYY-OZ-PXz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ak0-3c-XdD"/>
+                <constraint firstAttribute="trailing" secondItem="wDK-7G-Y16" secondAttribute="trailing" id="f7r-ty-YBR"/>
+                <constraint firstAttribute="trailing" secondItem="BYY-OZ-PXz" secondAttribute="trailing" id="kYZ-LE-Srv"/>
+                <constraint firstItem="b5P-wR-419" firstAttribute="leading" secondItem="Pop-Kc-eHa" secondAttribute="trailing" id="l43-Uw-daI"/>
+                <constraint firstItem="V2t-LR-1Qr" firstAttribute="top" secondItem="wDK-7G-Y16" secondAttribute="bottom" id="mU6-Zo-i48"/>
+                <constraint firstItem="US7-86-pwi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="13" id="ow9-j9-JyM"/>
+                <constraint firstItem="V2t-LR-1Qr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pgL-a3-TqP"/>
+                <constraint firstItem="Pop-Kc-eHa" firstAttribute="top" secondItem="wDK-7G-Y16" secondAttribute="bottom" id="rar-BT-nh8"/>
+                <constraint firstItem="wDK-7G-Y16" firstAttribute="top" secondItem="US7-86-pwi" secondAttribute="bottom" constant="3" id="uLp-iu-e4W"/>
+                <constraint firstItem="Pda-BO-KQc" firstAttribute="top" secondItem="wDK-7G-Y16" secondAttribute="bottom" id="y4O-OR-hpG"/>
+            </constraints>
+            <point key="canvasLocation" x="35.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="list_bg.png" width="640" height="960"/>
+    </resources>
+</document>
