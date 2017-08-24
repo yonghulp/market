@@ -226,16 +226,7 @@
 #pragma mark - UIWebViewDelegate
 - (void)webViewDidStartLoad:(UIWebView *)webView{
     
-    self.context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
-    self.context.exceptionHandler =
-    ^(JSContext *context, JSValue *exceptionValue)
-    {
-        context.exception = exceptionValue;
-        NSLog(@"%@", exceptionValue);
-    };
     
-    // 以 JSExport 协议关联 native 的方法
-    self.context[@"client"] = self;
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
@@ -246,19 +237,23 @@
     
     // 禁用长按弹出框
     [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitTouchCallout='none';"];
+   self.navigationItem.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
  
+    self.context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
+    self.context.exceptionHandler =
+    ^(JSContext *context, JSValue *exceptionValue)
+    {
+        context.exception = exceptionValue;
+        NSLog(@"%@", exceptionValue);
+    };
     
+    // 以 JSExport 协议关联 native 的方法
+    self.context[@"client"] = self;
     [self.context evaluateScript:@"addNativeOK()"];
-   
-    [self performSelector:@selector(reloadName) withObject:nil afterDelay:0.5];
+    NSLog(@"%@",[webView.request.URL absoluteString]);
+  
 }
 
--(void)reloadName{
-    NSString *webName = [_webView stringByEvaluatingJavaScriptFromString:@"document.title"];
-    
-    self.navigationItem.title =webName;
-     NSLog(@"title=%@",webName);
-}
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     NSLog(@"%@",error.domain);

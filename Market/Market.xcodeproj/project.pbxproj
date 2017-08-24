@@ -948,8 +948,8 @@
 				TargetAttributes = {
 					6203E8ED1D83D265009998D6 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = QMSYG742PP;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = G7XZV264Y6;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -1282,8 +1282,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Qiang Gao (RAQY293Y45)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = QMSYG742PP;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = G7XZV264Y6;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Market/PrefixHeader.pch";
 				INFOPLIST_FILE = Market/Info.plist;
@@ -1295,8 +1295,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.DeZao.Supermarket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "fbe5b63b-8115-4eb5-a597-e69c022c5081";
+				PROVISIONING_PROFILE_SPECIFIER = supermarket;
 			};
 			name = Debug;
 		};
@@ -1306,8 +1306,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Qiang Gao (RAQY293Y45)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = QMSYG742PP;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = G7XZV264Y6;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Market/PrefixHeader.pch";
 				INFOPLIST_FILE = Market/Info.plist;
@@ -1319,8 +1319,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.DeZao.Supermarket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "fbe5b63b-8115-4eb5-a597-e69c022c5081";
+				PROVISIONING_PROFILE_SPECIFIER = supermarket;
 			};
 			name = Release;
 		};

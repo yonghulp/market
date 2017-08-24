@@ -3,7 +3,7 @@ var model;
 var request;
 var ContentDetail;
 function LoadData(){
-    
+
     var ds = "";
     if(model.user!=null){
       ds="&uId="+model.user.id;
